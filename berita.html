@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>AHS - Aurora High School</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+     <div class="container-fluid bg-dark text-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>123 Indonesia, PALEMBANG</small>
+                </div>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Working Hours</title>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                    <style>
+                        .h-100 {
+                            height: 100%;
+                        }
+                        .d-inline-flex {
+                            display: inline-flex;
+                        }
+                        .align-items-center {
+                            align-items: center;
+                        }
+                        .text-primary {
+                            color: #007bff;
+                        }
+                        .me-2 {
+                            margin-right: 0.5rem;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <div class="h-100 d-inline-flex align-items-center">
+                        <small class="far fa-clock text-primary me-2"></small>
+                        <small id="working-hours">Loading...</small>
+                    </div>
+                
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            const workingHoursElement = document.getElementById("working-hours");
+                
+                            // Tentukan jam kerja
+                            const workingHours = {
+                                start: 9, // 9:00 AM
+                                end: 21 // 9:00 PM
+                            };
+                
+                            // Fungsi untuk memperbarui status jam kerja
+                            function updateWorkingHours() {
+                                const now = new Date();
+                                const currentHour = now.getHours();
+                                const isOpen = currentHour >= workingHours.start && currentHour < workingHours.end;
+                
+                                // Format status sesuai waktu
+                                workingHoursElement.textContent = isOpen
+                                    ? `Open Now: Mon - Fri : 07.00 AM - 14.00 PM`
+                                    : `Closed: Mon - Fri : 14.00 AM - 07.00 PM`;
+                            }
+                
+                            // Jalankan fungsi saat halaman dimuat
+                            updateWorkingHours();
+                
+                            // Opsional: Perbarui setiap menit
+                            setInterval(updateWorkingHours, 60000);
+                        });
+                    </script>
+                </body>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+62 822 6264 5643</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+                href="https://web.facebook.com/tkxaveriusempat.tkxaveriusempat?locale=id_ID"
+                target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+                href="https://www.youtube.com/@XAVFOURkitChanel"
+                target="_blank"> <i class="fab fa-youtube"></i></a>
+                <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+                href="https://www.instagram.com/tkxaverius4_/"
+                target="_blank"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary"
+                href="https://www.tiktok.com/@xavfourkit4"
+                target="_blank"> <i class="fab fa-tiktok"></i> </a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+     <!-- Navbar Start -->
+     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+            <img src="img/logotk.png" alt="Logo" style="width: 150px; height: 150px; margin-right: 10px;">
+            <h2 class="m-0">TK XAVERIUS 4 PALEMBANG</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">BERANDA</a>
+                <a href="about.html" class="nav-item nav-link">PROFIL</a>
+                <a href="berita.html" class="nav-item nav-link active">BERITA</a>
+                <a href="courses.html" class="nav-item nav-link">FASILITAS</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">PPDB</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <a href="feature.html" class="dropdown-item">PPDB</a>
+                        <a href="appointment.html" class="dropdown-item">VISI-MISI</a>
+                        <a href="team.html" class="dropdown-item">MAKNA LOGO</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <style>
+        .carousel-caption h1 {
+            font-size: 2rem;
+            color: #fce300;
+            font-family: 'Angsana New', sans-serif;
+            text-shadow: 1px 4px 4px rgba(17, 17, 18, 0.534);
+            line-height: 1.4;
+            font-weight: Light;
+        }
+        </style>
+
+
+
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .container {
+            display: flex;
+    justify-content: space-between; /* Beri ruang antara berita dan sidebar */
+    gap: 20px; /* Tambahkan jarak antar elemen */
+    max-width: 1200px; /* Batas maksimum lebar kontainer */
+    margin: 0 auto; /* Pusatkan kontainer di tengah halaman */
+    padding: 20px; /* Padding di dalam kontainer */
+    flex-wrap: wrap; /* Agar elemen responsif pada layar kecil */
+    }
+
+    
+    .news {
+        flex: 2; /* Beri porsi yang lebih besar untuk berita */
+    }
+    
+    .news-item {
+      display: flex;
+      flex-wrap: wrap; /* Memastikan responsif */
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 20px;
+      background-color: #ffffff;
+      border: 1px solid #68666675;
+      border-radius: 5px;
+      overflow: hidden;
+      max-width: 100%; /* Batasi lebar */
+      padding: 9px;
+      max-width: 900px; /* Batasi lebar maksimum */
+    }
+    
+    .news-item img {
+      flex: 1;
+      max-width: 150px;
+      width: 100%;
+      height: auto; /* Membuat gambar responsif */
+      object-fit: cover; /* Menjaga proporsi gambar */
+      border-radius: 5px;
+    }
+    
+    .news-content {
+      flex: 2;
+      min-width: 0; /* Mengatasi isu overflow pada teks */
+    }
+    
+    .news-content h2 {
+      font-size: 18px;
+      margin: 0 0 10px;
+      color: #333;
+      word-wrap: break-word; /* Membungkus teks panjang */
+    }
+    
+    .news-content p,
+    .news-content span {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+    
+    /* Sidebar Section */
+   .sidebar {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Semua judul di sidebar */
+.sidebar h3 {
+  font-size: 16px;
+  color: #0a49f6;
+  font-weight: 600;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #0a49f6;
+  padding-bottom: 4px;
+}
+
+/* Tambah jarak antar bagian */
+.sidebar > div {
+  margin-bottom: 25px;
+}
+
+/* Kotak pencarian */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.search-box button {
+  background-color: #0a49f6;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #073bb8;
+}
+
+/* Daftar link */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.sidebar ul li a:hover {
+  color: #0a49f6;
+}
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 768px) {
+      .news-item {
+        flex-wrap: wrap; /* Membuat elemen lebih fleksibel */
+      }
+    
+      .news-item img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+      }
+    
+      .news-content {
+        flex: 1;
+      }
+    }
+    </style>
+    
+</head>
+<body>
+  
+  <main class="container">
+    <!-- Berita Section -->
+    <section class="news">
+      <article class="news-item">
+        <img src="img/misa.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2> XAVFOURkit Kegiatan Rohani</h2>
+          <p>Hallo Sobat XAVFOURkit 👋
+            Hari ini kegiatan kami di pagi hari sebelum belajar adalah kami mengikuti kegiatan Misa Jumat Pertama bersama ibu guru, kakak SD dan juga kakak SMP 😍
+            Jangan lupa ikut misa juga ya teman-teman 🥰✨</p>
+         <h2> <span>03, Oktober 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/sosialisasi.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Sosialisasi</h2>
+           <p>Hallo Sobat XAVFOURkit 👋
+            Ini adalah dokumentasi pertemuan wali murid awal tahun ajaran di TK Xaverius 4 Palembang 😍
+            Terima kasih kepada papa dan mama yang berkenan meluangkan waktunya beberapa hari yang lalu untuk dapat hadir dalam pertemuan ini🙏✨</p>
+         <h2> <span>16, Juli 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/ultah.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Birthday September</h2>
+          <p>Selamat ulang tahun untuk Feo, Zamora dan Shean🎉❤️✨
+              Semoga selalu sehat, panjang umur, tambah pintar dan penuh sukacita. Amin😇🙏</p>
+          <h2> <span>30, September 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/juara.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Prestasi</h2>
+          <p>Selamat atas prestasi yang telah di raih oleh XAVFOURKIT DANCE yang telah ditampilkan oleh Auryn,Viona, Vyoneta, Kimberly dan Joy🏆✨
+            Terima kasih karena telah dengan bangga mewakili sekolah kita dalam Lomba Modern Dance Tingkat TK Pada Acara Xavos Fair III, SMK Xaverius Palembang🤩
+            XAVFOURkit berprestasi, XAVFOURkit hebat🌟</p>
+          <h2> <span>22, Oktober 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/action.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit In Action</h2>
+          <p>Hallo Sobat XAVFOURkit 👋
+            Dalam rangka memeriahkan Xavos Fair III, SMK Xaverius Palembang kami mengikuti berbagai lomba yaitu modern dance, mewarnai dan fashion show 😍✨
+            Sekali lagi selamat bagi para pemenang dan semangat bagi yang belum menang masih banyak waktu untuk berlomba dan berlatih 🥰❤️</p>
+          <h2> <span>15, Oktober 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/batik.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>AVFOURkit Perayaan</h2>
+          <p>Keluarga Besar TK Xaverius 4 Palembang mengucapkan Selamat Hari Batik Nasional!
+              Mari bersama-sama kita rawat tradisi ini dengan cara yang sederhana yaitu kenakan dan cintai sepenuh hati.</p>
+          <h2> <span>02, Oktober 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/pangan.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Peringatan</h2>
+          <p>Keluarga Besar TK Xaverius 4 Palembang mengucapkan Selamat Memperingati Hari Pangan Sedunia!
+              Mari kita bersama-sama berkomitmen untuk mengatasi kelaparan dan memastikan setiap orang mendapatkan akses pangan yang sehat dan bergizi✨</p>
+         <h2> <span>16, Oktober 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/kemerdekaan.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Kemerdekaan</h2>
+          <p>Keluarga Besar TK Xaverius 4 Palembang mengucapkan Dirgahayu Republik Indonesia Ke-80🇮🇩
+              Semoga semakin maju, bersatu, berdaulat, rakyat semakin sejahtera untuk Indonesia maju😍</p>
+         <h2> <span>17, Agustus 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/maulid.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Perayaan</h2>
+          <p>Keluarga Besar TK Xaverius 4 Palembang mengucapkan Selamat Memperingati Maulid Nabi Muhammad SAW bagi yang merayakan✨😇
+            Mari jadikan momentum ini sebagai sarana memperkokoh persaudaraan dan memperkuat ketakwaan</p>
+         <h2> <span>05, September 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/masak.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Cooking class</h2>
+          <p>Hallo sobat XAVFOURKIT👋
+            Yuk ikuti belajar dan praktik bersama Parenting untuk membuat makanan khas Palembang yaitu Pempek pada hari Jumat, 26 September 2025.
+            Sampai jumpa besok di sekolah 👋✨</p>
+         <h2> <span>25, September 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/walimurid.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit With Parenting</h2>
+          <p>Hallo Sobat XAVFOURkit 👋
+              Inilah kebersamaan kami para guru dengan pengurus parenting tahun pelajaran ini😍✨</p>
+         <h2> <span>01, Oktober 2025</span></h2>
+        </div>
+      </article>
+      <article class="news-item">
+        <img src="img/pancasila.webp" alt="Event Photo">
+        <div class="news-content">
+          <h2>XAVFOURkit Perayaan</h2>
+          <p>Keluarga Besar TK Xaverius 4 Palembang mengucapkan Selamat Hari Kesaktian Pancasila!
+            Mari jadikan perbedaan sebagai kekuatan kita bersama untuk membangun Indonesia yang lebih baik, maju dan berkembang 🙏</p>
+         <h2> <span>01, Oktober 2025</span></h2>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sidebar Section -->
+   <aside class="sidebar">
+  <!-- Search Section -->
+  <div class="search">
+    <h3>Search</h3>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </div>
+
+  <!-- Categories Section -->
+  <div class="categories">
+    <h3>Categories</h3>
+    <select>
+      <option>Select Category</option>
+      <option>Berita Sekolah</option>
+      <option>Event</option>
+      <option>Prestasi</option>
+    </select>
+  </div>
+
+  <!-- Recent Posts -->
+  <div class="recent-posts">
+    <h3>Recent Posts</h3>
+    <ul>
+      <li><a href="#">Experience the exciting Grade X Outing Week</a></li>
+      <li><a href="#">Aurora High School Achievement</a></li>
+      <li><a href="#">Outing Kelas AHS</a></li>
+    </ul>
+  </div>
+
+  <!-- Archives -->
+  <div class="archives">
+    <h3>Archives</h3>
+    <ul>
+      <li><a href="#">Januari 2021</a></li>
+      <li><a href="#">Febuari 2021</a></li>
+      <li><a href="#">Maret 2021</a></li>
+      <li><a href="#">April 2021</a></li>
+      <li><a href="#">Mei 2021</a></li>
+      <li><a href="#">Juni 2021</a></li>
+      <li><a href="#">Juli 2021</a></li>
+      <li><a href="#">Agustus 2021</a></li>
+      <li><a href="#">September 2021</a></li>
+      <li><a href="#">Oktober 2021</a></li>
+      <li><a href="#">November 2021</a></li>
+      <li><a href="#">December 2021</a></li>
+      <li><a href="#">Januari 2022</a></li>
+      <li><a href="#">Febuari 2022</a></li>
+      <li><a href="#">Maret 2022</a></li>
+      <li><a href="#">April 2022</a></li>
+      <li><a href="#">Mei 2022</a></li>
+      <li><a href="#">Juni 2022</a></li>
+      <li><a href="#">Juli 2022</a></li>
+      <li><a href="#">Agustus 2022</a></li>
+      <li><a href="#">September 2022</a></li>
+      <li><a href="#">Oktober 2022</a></li>
+      <li><a href="#">November 2022</a></li>
+      <li><a href="#">December 2022</a></li>
+      <li><a href="#">Januari 2023</a></li>
+      <li><a href="#">Febuari 2023</a></li>
+      <li><a href="#">Maret 2023</a></li>
+      <li><a href="#">April 2023</a></li>
+      <li><a href="#">Mei 2023</a></li>
+      <li><a href="#">Juni 2023</a></li>
+      <li><a href="#">Juli 2023</a></li>
+      <li><a href="#">Agustus 2023</a></li>
+      <li><a href="#">September 2023</a></li>
+      <li><a href="#">Oktober 2023</a></li>
+      <li><a href="#">November 2023</a></li>
+      <li><a href="#">December 2023</a></li>
+      <li><a href="#">Januari 2024</a></li>
+      <li><a href="#">Febuari 2024</a></li>
+      <li><a href="#">Maret 2024</a></li>
+      <li><a href="#">April 2024</a></li>
+      <li><a href="#">Mei 2024</a></li>
+      <li><a href="#">Juni 2024</a></li>
+      <li><a href="#">Juli 2024</a></li>
+      <li><a href="#">Agustus 2024</a></li>
+      <li><a href="#">September 2024</a></li>
+      <li><a href="#">Oktober 2024/a></li>
+      <li><a href="#">November 2024</a></li>
+      <li><a href="#">December 2024</a></li>
+      <li><a href="#">Januari 2025</a></li>
+      <li><a href="#">Febuari 2025</a></li>
+      <li><a href="#">Maret 2025</a></li>
+      <li><a href="#">April 2025</a></li>
+      <li><a href="#">Mei 2025</a></li>
+      <li><a href="#">Juni 2025</a></li>
+      <li><a href="#">Juli 2025</a></li>
+      <li><a href="#">Agustus 2025</a></li>
+      <li><a href="#">September 2025</a></li>
+       <li><a href="#">Oktober 2025</a></li>
+ 
+    </ul>
+  </div>
+</aside>
+  </main>
+</body>
+
+
+    <!-- Footer Start -->
+      <div class="container-fluid text-light footer my-6 mb-0 py-6 wow fadeIn"
+     style="
+        background-image: url('img/tk2.png');
+        background-size: 100%;
+        background-position-x: 30%; /* ubah untuk geser kanan/kiri */
+        background-position-y: center;
+        background-repeat: no-repeat;
+        position: relative;
+        overflow: hidden;
+     ">
+    <!-- Overlay gelap lembut agar teks tetap jelas -->
+    <div style="position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #012f4fc0; /* ubah opacity jika mau lebih terang/gelap */
+                z-index: 0;"></div>
+
+    <!-- Konten footer di atas background -->
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+    <h4 class="text-white mb-4">INFO KONTAK</h4>
+    <div style="position: relative; padding-left: 30px; margin-bottom: 8px;">
+        <i class="fa fa-map-marker-alt" style="position: absolute; left: 0; top: 2px;"></i>
+        30120, Indonesia, PALEMBANG
+    </div>
+    <div style="position: relative; padding-left: 30px; margin-bottom: 8px;">
+        <i class="fa fa-phone-alt" style="position: absolute; left: 0; top: 2px;"></i>
+        +62 822 6264 5643
+    </div>
+    <div style="position: relative; padding-left: 30px; margin-bottom: 8px;">
+        <i class="fa fa-envelope" style="position: absolute; left: 0; top: 2px;"></i>
+        xavfourkit4@gmail.id
+    </div>
+    <div style="position: relative; padding-left: 30px;">
+        <i class="far fa-clock text-primary" style="position: absolute; left: 0; top: 2px;"></i>
+        Buka: Senin–Jumat | 07.00–14.00 WIB
+    </div>
+    <div style="position: relative; padding-left: 30px; margin-bottom: 8px;">
+        <i class="fa fa-map-marker-alt" style="position: absolute; left: 0; top: 2px;"></i>
+        Jl. KH. Ahmad Dahlan No.34, Talang Semut, Kec. Bukit Kecil, Kota Palembang, Sumatera Selatan 30121
+    </div>
+</div>
+
+<div class="col-lg-3 col-md-6">
+    <h4 class="text-light mb-4">TENTANG</h4>
+    <a class="btn btn-link text-white" href="index.html">Beranda</a>
+    <a class="btn btn-link text-white" href="about.html">Profil</a>
+    <a class="btn btn-link text-white" href="courses.html">Fasilitas</a>
+    <a class="btn btn-link text-white" href="appointment.html">Visi-Misi</a>
+    <a class="btn btn-link text-white" href="team.html">Makna Logo</a>
+</div>
+
+
+            <div class="col-lg-3 col-md-6">
+                <style>
+                    .h5-spacing { margin-top: 30px; }
+                    .h6-spacing { margin-top: 30px; }
+                </style>
+                <h4 class="text-light mb-4">PENDAFTARAN</h4>
+                <a class="btn btn-link text-white" href="feature.html">Pendaftaran</a>
+                <a class="btn btn-link text-white" href="contact.html">Contact</a>
+
+                <h5 class="text-light mb-4 h5-spacing">INFORMASI</h5>
+                <a class="btn btn-link text-white" href="berita.html">Berita</a>
+                <a class="btn btn-link text-white" href="testimonial.html">Alumni</a>
+                <a class="btn btn-link text-white" href="feature.html">PPDB</a>
+            </div>
+
+            <div class="col-lg-3 col-md-6 text-center">
+        <img src="img/logotk.png" alt="Logo TK Xaverius 4 Palembang"
+         class="img-fluid mb-3"
+         style="width: 400px; 
+                max-width: none; 
+                height: auto; 
+                filter: drop-shadow(0 0 10px #ffffff74);
+                transform: translateY(-40px);">
+                <div class="follow-section" style="margin-top: -150px;"> 
+                     <h6 class="text-white mb-3">Follow Us</h6>
+              <div class="d-flex justify-content-center" style="position: relative; z-index: 10;">
+                <a class="btn btn-square btn-outline-light me-2" href="https://www.instagram.com/tkxaverius4_/" target="_blank">
+                    <i class="fab fa-instagram"></i></a>
+                <a class="btn btn-square btn-outline-light me-2" href="https://web.facebook.com/tkxaveriusempat.tkxaveriusempat?locale=id_ID" target="_blank">
+                    <i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-square btn-outline-light me-2" href="https://www.youtube.com/@XAVFOURkitChanel" target="_blank">
+                    <i class="fab fa-youtube"></i></a>
+                <a class="btn btn-square btn-outline-light" href="https://www.tiktok.com/@xavfourkit4" target="_blank">
+                    <i class="fab fa-tiktok"></i></a>
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- Copyright Start -->
+     <div class="container-fluid copyright text-light wow fadeIn"
+     data-wow-delay="0.1s"
+     style="
+        background-color: #012f4f9a;     /* warna background */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 53px;                 /* ubah tinggi di sini, makin kecil makin tipis */
+     ">
+       
+    <div class="row" style="justify-content: center; height: 100%;">
+        <div class="col-md-6" style="display: flex; justify-content: center; align-items: center;">
+            <p style="font-size: 18px; color: #ffffff; margin: 0;">
+                <a href="#" style="color: #eeff00; text-decoration: none;">2025 Hak Cipta,</a> XAVFOURkit
+            </p>
+        </div>
+    </div>
+</div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
